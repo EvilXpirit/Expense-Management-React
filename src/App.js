@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import MainContent from './components/MainContent';
 import './App.css';
+// import './background.css';
 
 function App() {
+  const [salary, setSalary] = useState([0, 0, 0, 0, 0]);
+  const [expenses, setExpenses] = useState([
+    [],
+    [],
+    [],
+    [],
+    []
+  ]);
+  const [currentMonth, setCurrentMonth] = useState(1);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar
+        salary={salary}
+        setSalary={setSalary}
+        expenses={expenses}
+        setExpenses={setExpenses}
+        currentMonth={currentMonth}
+        setCurrentMonth={setCurrentMonth}
+      />
+      <MainContent
+        salary={salary}
+        expenses={expenses}
+        currentMonth={currentMonth}
+        setExpenses={setExpenses}
+      />
+      
     </div>
   );
 }

@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
-.App-link {
-  color: #61dafb;
+
+.App {
+  display: flex;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  width: 40%;
+  height: 100vh; 
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.253);
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar select,
+.sidebar input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  color: #fff;
+}
+
+.sidebar select option {
+  background-color: #555;
+  color: #fff;
+}
+
+
+.main-content {
+  flex: 3;
+  padding: 20px;
+}
+
+.expense-form {
+  margin-bottom: 20px;
+}
+
+.expense-form input,
+.expense-form select,
+.expense-form button {
+  padding: 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.expense-form button {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.expense-form button:hover {
+  background-color: #555;
+}
+
+.expense-list table {
+  width: 200%;
+  border-collapse: collapse;
+}
+
+.expense-list th,
+.expense-list td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.expense-list th {
+  background-color: #f2f2f2;
+}
+
+.expense-list button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 2px;
+  border-radius: 5px;
+}
+
+.expense-list button:hover {
+  background-color: #555;
 }
