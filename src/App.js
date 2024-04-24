@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
 import './App.css';
-// import './background.css';
 
 function App() {
   const [salary, setSalary] = useState([0, 0, 0, 0, 0]);
@@ -14,6 +13,29 @@ function App() {
     []
   ]);
   const [currentMonth, setCurrentMonth] = useState(1);
+
+  useEffect(() => {
+    const storedSalary = JSON.parse(localStorage.getItem('salary'));
+    if (storedSalary) {
+      setSalary(storedSalary);
+    }
+
+    const storedExpenses = JSON.parse(localStorage.getItem('expenses'));
+    if (storedExpenses) {
+      setExpenses(storedExpenses);
+    }
+
+    const storedCurrentMonth = JSON.parse(localStorage.getItem('currentMonth'));
+    if (storedCurrentMonth) {
+      setCurrentMonth(storedCurrentMonth);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('salary', JSON.stringify(salary));
+    localStorage.setItem('expenses', JSON.stringify(expenses));
+    localStorage.setItem('currentMonth', JSON.stringify(currentMonth));
+  }, [salary, expenses, currentMonth]);
 
   return (
     <div className="App">
@@ -31,7 +53,6 @@ function App() {
         currentMonth={currentMonth}
         setExpenses={setExpenses}
       />
-      
     </div>
   );
 }

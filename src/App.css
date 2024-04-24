@@ -1,10 +1,15 @@
-/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&family=Teko:wght@300..700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   margin: 0;
   padding: 0;
   display: flex;
   height: 100vh;
+  background-image: url('https://wallpaperxyz.com/wp-content/uploads/Gif-Animated-Wallpaper-Background-Full-HD-Free-Download-for-PC-Macbook-261121-Wallpaperxyz.com-31.gif');
+    background-size: cover;
   background-color: #f0f0f0;
 }
 
@@ -16,11 +21,11 @@ body {
 
 .sidebar {
   padding: 20px;
-  background-color: #333;
+  background-color: #18003e86;
   color: #fff;
   width: 40%;
   height: 100vh; 
-  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.253);
+  box-shadow: 1px 2px 8px rgba(255, 255, 255, 0.253);
 }
 
 .sidebar h2 {
@@ -47,7 +52,9 @@ body {
 .main-content {
   flex: 3;
   padding: 20px;
+  color: white;
 }
+
 
 .expense-form {
   margin-bottom: 20px;
@@ -61,6 +68,7 @@ body {
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
+  color: black;
 }
 
 .expense-form button {
@@ -71,11 +79,17 @@ body {
 
 .expense-form button:hover {
   background-color: #555;
+  color: white;
 }
+
+/* .expense-list{
+  
+} */
 
 .expense-list table {
   width: 200%;
   border-collapse: collapse;
+  /* border-radius: 5px; */
 }
 
 .expense-list th,
@@ -83,10 +97,19 @@ body {
   border: 1px solid #ddd;
   padding: 10px;
   text-align: left;
+  color: black;
+  border-radius: 5px;
+  border-style: none;
 }
 
 .expense-list th {
   background-color: #f2f2f2;
+  color: black;
+}
+
+.expense-list tbody {
+  background-color: #f2f2f2c2;
+  color: black;
 }
 
 .expense-list button {
