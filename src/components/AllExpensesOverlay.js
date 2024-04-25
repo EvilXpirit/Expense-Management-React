@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function AllExpensesOverlay({ expenses, closeOverlay }) {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredExpenses = expenses.filter(
+    (expense) =>
+      expense.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="overlay">
       <div className="overlay-content">
         <h2>All Expenses</h2>
+        <input
+          type="text"
+          placeholder="Search by expense name"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
         <table>
           <thead>
             <tr>
@@ -15,7 +28,7 @@ function AllExpensesOverlay({ expenses, closeOverlay }) {
             </tr>
           </thead>
           <tbody>
-            {expenses.map((expense, index) => (
+            {filteredExpenses.map((expense, index) => (
               <tr key={index}>
                 <td>{expense.name}</td>
                 <td>{expense.amount}</td>

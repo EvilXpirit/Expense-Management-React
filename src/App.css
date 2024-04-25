@@ -39,6 +39,22 @@ header h3{
   width: 100%;
 }
 
+.App .allbutton {
+  background-color: #535353;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px;
+  position: absolute;
+  top: 30%;
+  right: 4%;
+}
+
+.App .allbutton:hover {
+  background-color: #777777;
+  color: white;
+}
+
 .sidebar {
   padding: 20px;
   background-color: #18003e86;
@@ -185,6 +201,7 @@ header h3{
   padding: 3rem;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 70%;
 }
 
 .overlay table {
@@ -203,21 +220,30 @@ header h3{
   background-color: #f2f2f2;
 }
 
-
-.App .allbutton {
+.overlay button {
   background-color: #535353;
   color: #fff;
   cursor: pointer;
   border-radius: 5px;
   padding: 8px;
   position: absolute;
-  top: 30%;
-  right: 4%;
+  top: 4%;
+  right: 5%;
 }
 
-.App .allbutton:hover {
+.overlay button:hover {
   background-color: #777777;
   color: white;
 }
+
+.overlay-content input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
 
 
