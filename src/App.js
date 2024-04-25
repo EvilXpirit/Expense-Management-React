@@ -1,7 +1,10 @@
+// App.js
 import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
+import AllExpensesOverlay from './components/AllExpensesOverlay';
 import './App.css';
+import './components/animations.css';
 
 function App() {
   const [salary, setSalary] = useState([0, 0, 0, 0, 0]);
@@ -13,6 +16,7 @@ function App() {
     []
   ]);
   const [currentMonth, setCurrentMonth] = useState(1);
+  const [showAllExpenses, setShowAllExpenses] = useState(false);
 
   // Load data from local storage on initial render
   useEffect(() => {
@@ -39,11 +43,24 @@ function App() {
     localStorage.setItem('currentMonth', JSON.stringify(currentMonth));
   }, [salary, expenses, currentMonth]);
 
+  const handleShowAllExpenses = () => {
+    setShowAllExpenses(true);
+  };
+
+  const handleCloseOverlay = () => {
+    setShowAllExpenses(false);
+  };
+
   return (
     <div className="App">
       <header className="header">
+      <div className="animated"> 
+
+</div>
         <h3>Expense Management</h3>
+        <button className='allbutton' onClick={handleShowAllExpenses}>Show All Expenses</button>
       </header>
+
       <Sidebar
         salary={salary}
         setSalary={setSalary}
@@ -58,6 +75,9 @@ function App() {
         currentMonth={currentMonth}
         setExpenses={setExpenses}
       />
+      {showAllExpenses && (
+        <AllExpensesOverlay expenses={expenses.flat()} closeOverlay={handleCloseOverlay} />
+      )}
     </div>
   );
 }

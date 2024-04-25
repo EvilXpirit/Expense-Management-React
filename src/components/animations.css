@@ -1,0 +1,71 @@
+.animated {
+    /* width: 150px;
+    height: 150px; */
+    width: 70px;
+    height: 70px;
+    background-color: midnightblue; /* Changed background color */
+    animation: squareToCircle 2s 1s infinite alternate;
+    -webkit-animation: squareToCircle 2s 1s infinite alternate;
+    position: absolute;
+    /* right: 10%;
+    top: 17%; */
+    left: 2%;
+    top: 15%;
+  }
+  
+  @keyframes squareToCircle {
+    0% {
+      border-radius: 0 0 0 0;
+      background: midnightblue; /* Changed background color */
+      transform: rotate(0deg);
+    }
+    25% {
+      border-radius: 50% 0 0 0;
+      background: navy; /* Changed background color */
+      transform: rotate(45deg);
+    }
+    50% {
+      border-radius: 50% 50% 0 0;
+      background: darkblue; /* Changed background color */
+      transform: rotate(90deg);
+    }
+    75% {
+      border-radius: 50% 50% 50% 0;
+      background: slateblue; /* Changed background color */
+      transform: rotate(135deg);
+    }
+    100% {
+      border-radius: 50% 50% 50% 50%;
+      background: navy; /* Changed background color */
+      transform: rotate(180deg);
+    }
+  }
+  
+  @-webkit-keyframes squareToCircle {
+    0% {
+      border-radius: 0 0 0 0;
+      background: midnightblue; /* Changed background color */
+      transform: rotate(0deg);
+    }
+    25% {
+      border-radius: 50% 0 0 0;
+      background: navy; /* Changed background color */
+      transform: rotate(45deg);
+    }
+    50% {
+      border-radius: 50% 50% 0 0;
+      background: darkblue; /* Changed background color */
+      transform: rotate(90deg);
+    }
+    75% {
+      border-radius: 50% 50% 50% 0;
+      background: slateblue; /* Changed background color */
+      transform: rotate(135deg);
+    }
+    100% {
+      border-radius: 50% 50% 50% 50%;
+      background: navy; /* Changed background color */
+      transform: rotate(180deg);
+    }
+  }
+  
