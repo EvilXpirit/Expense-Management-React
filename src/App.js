@@ -14,6 +14,7 @@ function App() {
   ]);
   const [currentMonth, setCurrentMonth] = useState(1);
 
+  // Load data from local storage on initial render
   useEffect(() => {
     const storedSalary = JSON.parse(localStorage.getItem('salary'));
     if (storedSalary) {
@@ -31,6 +32,7 @@ function App() {
     }
   }, []);
 
+  // Update local storage when salary or expenses change
   useEffect(() => {
     localStorage.setItem('salary', JSON.stringify(salary));
     localStorage.setItem('expenses', JSON.stringify(expenses));
@@ -39,6 +41,9 @@ function App() {
 
   return (
     <div className="App">
+      <header className="header">
+        <h3>Expense Management</h3>
+      </header>
       <Sidebar
         salary={salary}
         setSalary={setSalary}
