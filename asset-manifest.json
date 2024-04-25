@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Expense-Management-React/static/css/main.5d9679ad.css",
-    "main.js": "/Expense-Management-React/static/js/main.a95c398e.js",
+    "main.css": "/Expense-Management-React/static/css/main.cbeb86b4.css",
+    "main.js": "/Expense-Management-React/static/js/main.ff4ed6b6.js",
     "static/js/453.c55e0a2c.chunk.js": "/Expense-Management-React/static/js/453.c55e0a2c.chunk.js",
     "index.html": "/Expense-Management-React/index.html",
-    "main.5d9679ad.css.map": "/Expense-Management-React/static/css/main.5d9679ad.css.map",
-    "main.a95c398e.js.map": "/Expense-Management-React/static/js/main.a95c398e.js.map",
+    "main.cbeb86b4.css.map": "/Expense-Management-React/static/css/main.cbeb86b4.css.map",
+    "main.ff4ed6b6.js.map": "/Expense-Management-React/static/js/main.ff4ed6b6.js.map",
     "453.c55e0a2c.chunk.js.map": "/Expense-Management-React/static/js/453.c55e0a2c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d9679ad.css",
-    "static/js/main.a95c398e.js"
+    "static/css/main.cbeb86b4.css",
+    "static/js/main.ff4ed6b6.js"
   ]
 }
